@@ -1,0 +1,867 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Crafty Corner - Online Craft Store</title>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+font-family:Arial;
+background:#fff7f0;
+line-height:1.6;
+}
+
+/* Header */
+
+header{
+background:#c2639a;
+color:white;
+padding:20px;
+text-align:center;
+}
+
+header h1{
+font-size:32px;
+}
+
+/* Navigation */
+
+nav{
+background:#97086e;
+}
+
+nav ul{
+display:flex;
+justify-content:center;
+list-style:none;
+}
+
+nav li{
+padding:15px;
+}
+
+nav a{
+color:white;
+text-decoration:none;
+}
+
+nav li:hover{
+background:#d4037d;
+}
+
+/* Hero */
+
+.hero{
+background:#f4dff0;
+padding:50px;
+text-align:center;
+}
+
+.hero h2{
+color:#7b3f68;
+margin-bottom:10px;
+}
+
+.hero p{
+color:#555;
+}
+
+/* Image Gallery */
+
+.gallery{
+padding:20px;
+text-align:center;
+background:#fff7f0;
+}
+
+.gallery h2{
+color:#7b3f68;
+margin-bottom:15px;
+}
+
+.gallery-images{
+display:flex;
+justify-content:center;
+gap:15px;
+flex-wrap:wrap;
+}
+
+.gallery-images img{
+width:200px;
+height:180px;
+object-fit:cover;
+border:2px solid #c2639a;
+border-radius:10px;
+}
+
+.gallery-images img:hover{
+border-color:#97086e;
+}
+
+/* Main Container */
+
+.container{
+display:flex;
+padding:20px;
+gap:20px;
+}
+
+/* Sidebar */
+
+.sidebar{
+width:25%;
+background:white;
+padding:20px;
+border-radius:10px;
+box-shadow:0 0 8px #ddd;
+}
+
+.sidebar h3{
+color:#740244;
+margin-bottom:10px;
+}
+
+.sidebar ul{
+list-style:none;
+}
+
+.sidebar li{
+padding:10px;
+border-bottom:1px solid #ddd;
+}
+
+.sidebar li:hover{
+background:#f4dff0;
+}
+
+/* Content */
+
+.content{
+width:75%;
+}
+
+.content h2{
+color:#7b3f68;
+}
+
+/* Cards */
+
+.cards{
+display:flex;
+gap:20px;
+margin-top:20px;
+}
+
+.card{
+flex:1;
+background:white;
+padding:20px;
+border-radius:10px;
+text-align:center;
+box-shadow:0 0 8px #ccc;
+}
+
+.card img{
+width:100%;
+height:180px;
+object-fit:cover;
+border-radius:10px;
+}
+
+.card h3{
+color:#c2639a;
+margin-top:10px;
+}
+
+button{
+background:#c2639a;
+color:white;
+padding:10px 20px;
+border:none;
+border-radius:5px;
+margin-top:10px;
+cursor:pointer;
+}
+
+button:hover{
+background:#7b3f68;
+}
+
+
+/* Custom Crafts */
+
+.custom{
+background:white;
+margin:20px;
+padding:30px;
+text-align:center;
+border-radius:12px;
+box-shadow:0 0 8px #ddd;
+}
+
+.custom h2{
+color:#740244;
+margin-bottom:10px;
+}
+
+.custom p{
+color:#555;
+max-width:700px;
+margin:auto;
+}
+
+.custom-options{
+display:flex;
+justify-content:center;
+gap:20px;
+margin-top:20px;
+}
+
+.custom-box{
+background:#f4dff0;
+padding:15px;
+border-radius:8px;
+width:180px;
+}
+
+.custom-box h3{
+color:#7b3f68;
+font-size:18px;
+}
+
+/* Pricing */
+
+.pricing{
+background:#f4dff0;
+padding:30px;
+text-align:center;
+}
+
+.pricing h2{
+color:#5d7630;
+margin-bottom:10px;
+}
+
+.pricing p{
+color:#555;
+margin-bottom:15px;
+}
+
+.pricing table{
+margin:auto;
+border-collapse:collapse;
+background:white;
+}
+
+.pricing th{
+background:#97086e;
+color:white;
+padding:12px 25px;
+}
+
+.pricing td{
+padding:12px 25px;
+border:1px solid #c2639a;
+color:#301934;
+}
+
+/* Useful Links */
+
+.links{
+padding:30px;
+text-align:center;
+background:#fff7f0;
+}
+
+.links h2{
+color:#4b164c;
+margin-bottom:15px;
+}
+
+.links p{
+margin:10px;
+}
+
+.links a{
+color:#97086e;
+font-weight:bold;
+}
+
+/* Contact */
+
+.contact{
+background:#f4dff0;
+padding:30px;
+text-align:center;
+}
+
+.contact h2{
+color:#740244;
+margin-bottom:10px;
+}
+
+.contact p{
+color:#301934;
+margin:8px;
+}
+
+.contact a{
+color:#97086e;
+font-weight:bold;
+}
+
+/* Footer */
+
+footer{
+background:#3b2635;
+color:white;
+padding:20px;
+text-align:center;
+margin-top:20px;
+}
+
+/* Tablet */
+
+@media screen and (max-width:992px){
+
+.container{
+flex-direction:column;
+}
+
+.sidebar,
+.content{
+width:100%;
+}
+
+.cards{
+flex-wrap:wrap;
+}
+
+.card{
+width:45%;
+}
+
+.custom-options{
+flex-wrap:wrap;
+}
+
+.gallery-images img{
+width:180px;
+height:160px;
+}
+
+}
+
+/* Mobile */
+
+@media screen and (max-width:768px){
+
+nav ul{
+flex-direction:column;
+text-align:center;
+}
+
+.cards{
+flex-direction:column;
+}
+
+.card{
+width:100%;
+}
+
+.hero{
+padding:30px;
+}
+
+.custom-options{
+flex-direction:column;
+align-items:center;
+}
+
+.custom-box{
+width:100%;
+max-width:300px;
+}
+
+.gallery-images{
+flex-direction:column;
+align-items:center;
+}
+
+.gallery-images img{
+width:100%;
+max-width:300px;
+height:200px;
+}
+
+.pricing{
+overflow-x:auto;
+}
+
+}
+
+/* Small Mobile */
+
+@media screen and (max-width:480px){
+
+header h1{
+font-size:24px;
+}
+
+.hero h2{
+font-size:22px;
+}
+
+button{
+width:100%;
+}
+
+.offer,
+.custom{
+margin:15px;
+padding:20px;
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<!-- ===================== HEADER ===================== -->
+
+<header id="top">
+
+<h1>Crafty Corner</h1>
+
+<p>Handmade Happiness, Delivered to Your Door</p>
+
+</header>
+
+
+<!-- ===================== NAVIGATION ===================== -->
+
+<nav>
+
+<ul>
+
+<li><a href="#top">Home</a></li>
+
+<li><a href="#products">Products</a></li>
+
+<li><a href="#pricing">Pricing</a></li>
+
+<li><a href="#categories">Categories</a></li>
+
+<li><a href="#contact">Contact</a></li>
+
+</ul>
+
+</nav>
+
+
+<!-- ===================== HERO ===================== -->
+
+<section class="hero">
+
+<h2>Welcome to Crafty Corner</h2>
+
+<p>
+Discover beautiful handmade crafts, creative DIY supplies,
+and unique products made with love!
+</p>
+
+</section>
+
+
+<!-- ===================== IMAGE GALLERY ===================== -->
+
+<section class="gallery">
+
+<h2>Our Creative Collection</h2>
+
+<div class="gallery-images">
+
+<a href="#products">
+<img src="images/craftstore.jpg"
+     alt="Craft gallery image 1">
+</a>
+
+<a href="#products">
+<img src="images/img1.jpg"
+     alt="Craft gallery image 2">
+</a>
+
+<a href="#products">
+<img src="images/img2.jpg"
+     alt="Craft gallery image 3">
+</a>
+
+<a href="#products">
+<img src="images/img3.jpg"
+     alt="Craft gallery image 4">
+</a>
+
+<a href="#products">
+<img src="images/img4.jpg"
+     alt="Craft gallery image 5">
+</a>
+
+<a href="#products">
+<img src="images/img5.jpg"
+     alt="Craft gallery image 6">
+</a>
+
+<a href="#products">
+<img src="images/img6.jpg"
+     alt="Craft gallery image 7">
+</a>
+
+</div>
+
+</section>
+
+
+<!-- ===================== PRODUCTS ===================== -->
+
+<div class="container" id="products">
+
+<div class="sidebar">
+
+<h3>Pick Your Choice</h3>
+
+<ul>
+
+<li>Painting & Art Supplies</li>
+
+<li>Knitting & Sewing</li>
+
+<li>Clay Crafts</li>
+
+<li>Handmade Candles</li>
+
+</ul>
+
+</div>
+
+
+<div class="content">
+
+<h2>Featured Crafts</h2>
+
+<p>
+Explore our collection of creative and handmade products.
+Find something special for yourself or your loved ones!
+</p>
+
+
+<div class="cards">
+
+
+<div class="card">
+
+<img src="images/Painting.jpg">
+
+<h3>Painting Kit</h3>
+
+<p>Everything you need to create beautiful artwork.</p>
+
+<button>Shop Now</button>
+
+</div>
+
+
+<div class="card">
+
+<img src="images/knitting.jpg">
+
+<h3>Knitting Kit</h3>
+
+<p>Creative knitting supplies for your next handmade project.</p>
+
+<button>Shop Now</button>
+
+</div>
+
+
+<div class="card">
+
+<img src="images/candles.jpg">
+
+<h3>Handmade Candle</h3>
+
+<p>Beautiful handmade candles to brighten your space.</p>
+
+<button>Shop Now</button>
+
+</div>
+
+
+</div>
+
+</div>
+
+</div>
+
+<!-- ===================== CUSTOM CRAFTS ===================== -->
+
+<section class="custom">
+
+<h2>Create Your Own Custom Craft</h2>
+
+<p>
+Looking for something unique? We create personalized handmade
+crafts based on your ideas. Choose your design, colours and style,
+and we will create a special craft just for you.
+</p>
+
+<div class="custom-options">
+
+<div class="custom-box">
+
+<h3>Custom Design</h3>
+
+<p>Share your creative idea with us.</p>
+
+</div>
+
+<div class="custom-box">
+
+<h3>Choose Colours</h3>
+
+<p>Select colours that match your style.</p>
+
+</div>
+
+
+<div class="custom-box">
+
+<h3>Handmade For You</h3>
+
+<p>We carefully create your personalized craft.</p>
+
+</div>
+
+
+</div>
+
+<button>Request Custom Craft</button>
+
+</section>
+
+
+<!-- ===================== PRICING TABLE ===================== -->
+
+<section class="pricing" id="pricing">
+
+<h2>Pricing List</h2>
+
+<p>
+Here's a general idea of what to expect.
+Choose the craft that suits your creativity and budget.
+</p>
+
+
+<table border="1">
+
+<tr>
+
+<th>Category</th>
+
+<th>Price Range</th>
+
+</tr>
+
+
+<tr>
+
+<td>Painting & Drawing</td>
+
+<td>₹500 - ₹1000</td>
+
+</tr>
+
+
+<tr>
+
+<td>Knitting & Sewing</td>
+
+<td>₹300 - ₹900</td>
+
+</tr>
+
+
+<tr>
+
+<td>Clay Craft</td>
+
+<td>₹250 - ₹800</td>
+
+</tr>
+
+
+<tr>
+
+<td>Handmade Candles</td>
+
+<td>₹200 - ₹700</td>
+
+</tr>
+
+</table>
+
+</section>
+
+
+<!-- ===================== CATEGORY DESCRIPTIONS ===================== -->
+
+<section class="links" id="categories">
+
+<h2>Category Descriptions</h2>
+
+<p>
+<strong>Painting:</strong>
+Supplies for acrylic, watercolor, and oil painting projects.
+</p>
+
+<p>
+<strong>Knitting & Sewing:</strong>
+Yarns, needles, fabrics, and tools for textile crafts.
+</p>
+
+<p>
+<strong>Clay Craft:</strong>
+Materials for pottery, sculpting, and air-dry clay modeling.
+</p>
+
+<p>
+<strong>Handmade Candles:</strong>
+Beautiful candles made to add warmth and creativity to your space.
+</p>
+
+</section>
+
+
+<!-- ===================== USEFUL / DEMO LINKS ===================== -->
+
+<section class="links">
+
+<h2>Useful Links</h2>
+
+
+<p>
+
+Visit our craft inspiration partner:
+
+<a href="https://www.pinterest.com"
+   target="_blank">
+
+Pinterest Craft Ideas
+
+</a>
+
+</p>
+
+
+<p>
+
+Jump to our
+
+<a href="#contact">
+
+Contact Section
+
+</a>
+
+</p>
+
+
+<p>
+
+<a href="#top">
+
+Back to Top
+
+</a>
+
+</p>
+
+</section>
+
+
+<!-- ===================== CONTACT ===================== -->
+
+<section class="contact" id="contact">
+
+<h2>Contact Us</h2>
+
+<p>
+We would love to hear from you!
+Reach out using any of the options below.
+</p>
+
+
+<p>
+
+Email:
+
+<a href="mailto:support@craftycorner.com">
+
+support@craftycorner.com
+
+</a>
+
+</p>
+
+
+<p>
+
+Phone:
+
+<a href="tel:+911234567890">
+
++91 12345 67890
+
+</a>
+
+</p>
+
+
+<p>
+
+Follow us, share your creations,
+and join our crafting community!
+
+</p>
+
+</section>
+
+
+<!-- ===================== FOOTER ===================== -->
+
+<footer>
+
+<h3>Crafty Corner - Online Craft Store</h3>
+
+<p>© 2026 Crafty Corner | Made with Love & Creativity</p>
+
+</footer>
+
+
+</body>
+
+</html>
